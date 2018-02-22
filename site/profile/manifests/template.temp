@@ -1,0 +1,14 @@
+class profile::dmz {
+  if $facts['os']['family'] == 'windows' {
+
+  }
+  elsif $facts['os']['family'] == 'RedHat' {
+
+  }
+  elsif $facts['osfamily'] == 'Debian' {
+
+  }
+  else {
+    #
+  }
+}
