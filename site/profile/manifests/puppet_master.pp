@@ -1,8 +1,8 @@
 class profile::puppet_master{
   class { 'hiera':
     hierarchy => [
-      'secure',
       '%{fqdn}',
+      '%{osfamily}',
       '%{environment}',
       'common',
       'accounts',
