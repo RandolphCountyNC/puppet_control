@@ -4,7 +4,8 @@ class profile::puppet_master{
       'secure',
       '%{fqdn}',
       '%{environment}',
-      'common'
+      'common',
+      'accounts',
       ],
     eyaml    =>  true,
   }
