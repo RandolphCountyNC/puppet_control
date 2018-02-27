@@ -8,6 +8,7 @@ mod 'puppetlabs-docker'
 mod 'puppet-selinux'
 mod 'puppet-hiera'
 mod 'puppetlabs-inifile'
+mod 'trlinkin-domain_membership'
 
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apt'
