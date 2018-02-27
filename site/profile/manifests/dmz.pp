@@ -7,9 +7,9 @@ class profile::dmz {
       enable => false,
     }
     #clean up from install
-    file { 'C:/Zimptemp/Puppet':
+    file { 'C:/Ziptemp/Puppet':
       ensure  => 'abenst',
-      path    => 'C:/Zimptemp/Puppet',
+      path    => 'C:/Ziptemp/Puppet',
       recurse => true,
     }
   }
