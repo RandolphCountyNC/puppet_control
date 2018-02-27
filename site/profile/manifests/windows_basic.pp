@@ -3,6 +3,9 @@ class profile::windows_basic {
   file { 'C:/Scripts':
     ensure => 'directory',
   }
+  file { 'C:/Ziptemp':
+    ensure => 'directory',
+  }
   $drive = 'C:'
   exec { 'disable-c-indexing':
     provider =>  powershell,
