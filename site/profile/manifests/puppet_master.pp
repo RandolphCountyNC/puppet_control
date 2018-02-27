@@ -1,12 +1,12 @@
 class profile::puppet_master{
   class { 'hiera':
-    hierachy => [
+    hierarchy => [
       'secure',
       '%{fqdn}',
       '%{environment}',
       'common',
       'accounts',
       ],
-    eyaml    =>  true,
+    eyaml     =>  true,
   }
 }
