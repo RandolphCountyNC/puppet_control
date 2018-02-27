@@ -12,9 +12,9 @@ class profile::dmz {
     }
     #clean up from install
     file { 'C:/Ziptemp/Puppet':
-      ensure  => 'abenst',
-      path    => 'C:/Ziptemp/Puppet',
-      recurse => true,
+      ensure => 'abenst',
+      path   => 'C:/Ziptemp/Puppet',
+      force  => true,
     }
   }
   elsif $facts['os']['family'] == 'RedHat' {
