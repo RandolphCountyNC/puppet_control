@@ -6,4 +6,7 @@ class users::dmz_users {
   user { 'dpmtr':
     ensure => 'absent',
   }
+  user { 'dpjcm':
+    ensure => 'absent',
+  }
 }
