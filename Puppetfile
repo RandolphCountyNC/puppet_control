@@ -7,6 +7,7 @@ mod 'puppetlabs-windows'
 mod 'puppetlabs-docker'
 mod 'puppet-selinux'
 mod 'puppet-hiera'
+mod 'puppetlabs-inifile'
 
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apt'
