@@ -1,8 +1,8 @@
 class profile::dmz {
-  if $facts['domain_membership_custom'] != 'co.randolph.nc.us' {
-    include users::dmz_users
-  }
   if $facts['os']['family'] == 'windows' {
+    if $facts['domain_membership_custom'] != 'co.randolph.nc.us' {
+      include users::dmz_users
+    }
     #disable RDP
     service { 'UmRdpService':
       ensure => 'stopped',
