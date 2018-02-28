@@ -8,6 +8,10 @@ class profile::test_base {
       ensure   => installed,
       provider => 'chocolatey',
     }
+    package { 'treesizefree':
+      ensure   => installed,
+      provider => 'chocolatey',
+    }
     if $facts['iis_version'] {
         warning('Has IIS, including base IIS config')
         include profile::iis
