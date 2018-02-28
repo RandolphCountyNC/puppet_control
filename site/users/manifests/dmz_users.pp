@@ -9,4 +9,7 @@ class users::dmz_users {
   user { 'dpjcm':
     ensure => 'absent',
   }
+  user { 'dptom':
+    ensure => 'absent',
+  }
 }
