@@ -19,17 +19,11 @@ class profile::test_base {
   }
   elsif $facts['os']['family'] == 'RedHat' {
     warning('WSUS not needed')
-    package { 'htop':
-      ensure => 'present',
-      name   => 'htop'
-    }
+    include packages::basic_linux_packages
   }
   elsif $facts['osfamily'] == 'Debian' {
     warning('WSUS not needed')
-    package { 'htop':
-      ensure => 'present',
-      name   => 'htop'
-    }
+    include packages::basic_linux_packages
   }
   else {
     #
