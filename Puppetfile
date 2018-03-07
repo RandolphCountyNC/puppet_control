@@ -10,6 +10,7 @@ mod 'puppet-hiera'
 mod 'puppetlabs-inifile'
 mod 'trlinkin-domain_membership'
 mod 'puppetlabs/chocolatey'
+mod 'ncorrare-bginfo'
 
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apt'
