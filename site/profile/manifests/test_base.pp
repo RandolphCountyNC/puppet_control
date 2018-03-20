@@ -2,19 +2,10 @@ class profile::test_base {
   if $facts['os']['family'] == 'windows' {
     include profile::test_wsus
     include profile::windows_basic
-    #Test Chocolatey installer
-    include chocolatey
-    package { 'notepadplusplus':
-      ensure   => installed,
-      provider => 'chocolatey',
-    }
-    package { 'treesizefree':
-      ensure   => installed,
-      provider => 'chocolatey',
-    }
     if $facts['iis_version'] {
         warning('Has IIS, including base IIS config')
         include profile::iis
+        include packages::basic_windows_packages
     }
   }
   elsif $facts['os']['family'] == 'RedHat' {
