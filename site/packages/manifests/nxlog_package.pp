@@ -41,7 +41,7 @@ class packages::nxlog_package {
     require => File['collector_sidecar.yml'],
   }
   service { 'collector-sidecar':
-    ensure  => 'started',
+    ensure  => 'running',
     require => File['collector_sidecar.yml'],
   }
 }
