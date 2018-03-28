@@ -26,7 +26,7 @@ class packages::nxlog_package {
     notify   => Package['collector_sidecar'],
   }
   exec { 'nxlog-service':
-    command => "'C:/Program Files (x86)/nxlog/nxlog.exe' -u",
+    command => '"C:/Program Files (x86)/nxlog/nxlog.exe" -u',
     require => Package['nxlog'],
   }
   package { 'collector_sidecar' :
@@ -37,7 +37,7 @@ class packages::nxlog_package {
     install_options => ['/S'],
   }
   exec { 'sidecar-service':
-    command => "'C:/Program Files/graylog/collector-sidecar/graylog-collector-sidecar.exe' -service install",
+    command => '"C:/Program Files/graylog/collector-sidecar/graylog-collector-sidecar.exe" -service install',
     require => File['collector_sidecar.yml'],
   }
   service { 'collector-sidecar':
