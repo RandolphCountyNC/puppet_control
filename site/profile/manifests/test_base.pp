@@ -6,6 +6,7 @@ class profile::test_base {
         warning('Has IIS, including base IIS config')
         include profile::iis
         include packages::basic_windows_packages
+        include packages::test_windows_packages
     }
   }
   elsif $facts['os']['family'] == 'RedHat' {
