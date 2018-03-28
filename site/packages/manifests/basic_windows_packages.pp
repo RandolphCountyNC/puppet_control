@@ -9,4 +9,6 @@ class packages::basic_windows_packages {
     ensure   => installed,
     provider => 'chocolatey',
   }
+  #Include NXLog and Graylog sidecar
+  include packages::nxlog_package
 }
