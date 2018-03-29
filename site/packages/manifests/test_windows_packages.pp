@@ -5,7 +5,7 @@ class packages::test_windows_packages {
     source => 'puppet:///modules/msi/WindowsAgentRandolph_x64.msi',
     mode   => '0774',
   }
-  package { 'traps' :
+  package { 'Traps 5.0.0.34309' :
     ensure   => present,
     provider => 'windows',
     source   => 'C:/Ziptemp/WindowsAgentRandolph_x64.msi',

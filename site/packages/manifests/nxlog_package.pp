@@ -16,20 +16,21 @@ class packages::nxlog_package {
     path    => 'C:/Program Files/graylog/collector-sidecar/collector_sidecar.yml',
     source  => 'puppet:///modules/config_files/collector_sidecar.yml',
     mode    => '0774',
-    require => Package['collector_sidecar'],
+    require => Package['Graylog Collector Sidecar'],
   }
-  package { 'nxlog' :
+  package { 'NXLog-CE' :
     ensure   => present,
     provider => 'windows',
     source   => 'C:/Ziptemp/nxlog-ce-2.9.1716.msi',
     require  => File['nxlog-ce-2.9.1716.msi'],
-    notify   => Package['collector_sidecar'],
+    notify   => Package['Graylog Collector Sidecar'],
   }
   exec { 'nxlog-service':
     command => '"C:/Program Files (x86)/nxlog/nxlog.exe" -u',
-    require => Package['nxlog'],
+    require => Package['NXLog-CE'],
+    onlyif  => "C:\\Windows\\System32\\cmd.exe /c reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\nxlog",
   }
-  package { 'collector_sidecar' :
+  package { 'Graylog Collector Sidecar' :
     ensure          => present,
     provider        => 'windows',
     source          => 'C:/Ziptemp/collector_sidecar_installer_0.1.5-1.exe',
@@ -39,6 +40,7 @@ class packages::nxlog_package {
   exec { 'sidecar-service':
     command => '"C:/Program Files/graylog/collector-sidecar/graylog-collector-sidecar.exe" -service install',
     require => File['collector_sidecar.yml'],
+    unless  => "C:\\Windows\\System32\\cmd.exe /c reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\collector-sidecar",
   }
   service { 'collector-sidecar':
     ensure  => 'running',
