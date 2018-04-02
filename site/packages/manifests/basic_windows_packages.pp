@@ -1,6 +1,9 @@
 class packages::basic_windows_packages {
   #Test Chocolatey installer
-  include chocolatey
+  #include chocolatey
+  class {'chocolatey':
+    log_output => true,
+  }
   package { 'notepadplusplus':
     ensure   => installed,
     provider => 'chocolatey',
