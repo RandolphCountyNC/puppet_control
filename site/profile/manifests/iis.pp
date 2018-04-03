@@ -1,4 +1,5 @@
 class profile::iis {
+##Configuration for ALL IIS servers
 ## Chris' change
   if $facts['os']['family'] == 'windows' {
         $iislogcleanup = 'CleanIISLogs.ps1'
