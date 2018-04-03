@@ -1,4 +1,5 @@
 class profile::iis {
+  ##Configuration for ALL IIS servers
   if $facts['os']['family'] == 'windows' {
         $iislogcleanup = 'CleanIISLogs.ps1'
         $powershellexe = 'C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
