@@ -1,4 +1,5 @@
 class profile::base {
+  ## This is applied through Foreman for all production machines
   if $facts['os']['family'] == 'windows' {
     include profile::prod_wsus
     include profile::windows_basic
