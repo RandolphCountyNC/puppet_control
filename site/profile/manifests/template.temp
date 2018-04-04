@@ -1,3 +1,4 @@
+## Comment from Michael
 class profile::dmz {
   if $facts['os']['family'] == 'windows' {
 

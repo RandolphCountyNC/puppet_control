@@ -1,4 +1,5 @@
 class profile::test_base {
+  ## This is the default profile for Test machines applied from Foreman
   if $facts['os']['family'] == 'windows' {
     include profile::test_wsus
     include profile::windows_basic
