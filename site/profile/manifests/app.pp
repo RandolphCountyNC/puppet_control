@@ -1,1 +1,6 @@
-class profile::app{}
+class profile::app{
+  include profile::document_imaging
+
+
+
+}
