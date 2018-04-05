@@ -6,7 +6,7 @@ class packages::test_windows_packages {
     mode   => '0774',
   }
   package { 'Traps 5.0.0.34309' :
-    ensure   => present,
+    ensure   => absent,
     provider => 'windows',
     source   => 'C:/Ziptemp/WindowsAgentRandolph_x64.msi',
     require  => File['WindowsAgentRandolph_x64.msi'],
