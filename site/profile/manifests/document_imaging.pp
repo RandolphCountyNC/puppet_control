@@ -25,3 +25,4 @@ class profile::document_imaging{
     }
   }
 }
+}
