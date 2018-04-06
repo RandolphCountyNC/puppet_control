@@ -1,14 +1,15 @@
 class packages::test_windows_packages {
-  file { 'WindowsAgentRandolph_x64.msi' :
+  file { 'installer_vista_win7_win8-64-3.1.0.150.msi' :
     ensure => 'file',
-    path   => 'C:/Ziptemp/WindowsAgentRandolph_x64.msi',
-    source => 'puppet:///modules/msi/WindowsAgentRandolph_x64.msi',
+    path   => 'C:/Ziptemp/installer_vista_win7_win8-64-3.1.0.150.msi',
+    source => 'puppet:///modules/msi/installer_vista_win7_win8-64-3.1.0.150.msi',
     mode   => '0774',
   }
-  package { 'Traps 5.0.0.34309' :
-    ensure   => absent,
-    provider => 'windows',
-    source   => 'C:/Ziptemp/WindowsAgentRandolph_x64.msi',
-    require  => File['WindowsAgentRandolph_x64.msi'],
+  package { 'Cb Defense Sensor 64-bit' :
+    ensure          => present,
+    provider        => 'windows',
+    source          => 'C:/Ziptemp/installer_vista_win7_win8-64-3.1.0.150.msi',
+    require         => File['installer_vista_win7_win8-64-3.1.0.150.msi'],
+    install_options => [{'COMPANY_CODE' => '9IYUL2XTWV6CJFP4V#S'}],
   }
 }
