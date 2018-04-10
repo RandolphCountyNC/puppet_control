@@ -22,7 +22,7 @@ class profile::document_imaging{
         start_time       => '04:00', # Must be specified
         minutes_interval => '60', # Repeat this task every 60 minutes
         minutes_duration => '300', # The task will run for a total of five hours
+      }
     }
   }
-}
 }
