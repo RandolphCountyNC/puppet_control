@@ -12,6 +12,10 @@ class packages::basic_windows_packages {
     ensure   => installed,
     provider => 'chocolatey',
   }
+  package { 'Symantec Backup Exec Remote Agent for Windows':
+    ensure   => absent,
+    provider => 'windows',
+  }
   #Include NXLog and Graylog sidecar
   include packages::nxlog_package
 }

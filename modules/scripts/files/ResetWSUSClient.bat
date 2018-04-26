@@ -1,4 +1,4 @@
-REM Commands to run to reset WSUS client after Clone
+REM Commands to run to reset WSUS client after clone
 net stop wuauserv
 reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
 reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
