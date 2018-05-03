@@ -2,7 +2,7 @@
 dmz_users:
   'dshue'       :
     comment     : 'Daniel Shue'
-    ensure      : 'present'
+    ensure      : 'absent'
     groups      : ['Users','Administrators']
     managehome  : 'true'
     name        : ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAPa/NRHoNvSrjVO5f2ZXi1ab+d+BW7oyklxD4KE1RYZVUsa32OgqZRSAj8bIuJSqcGntJ3iKIUSdQFz71wWV6VChJIQmuFoR4xjO7RlUds9bSZZ0Sdsj6Q5hBcFO0aQ3XbTKG3xAb2/njLHzewqLTLds1hRUlGNaqAu0j95AfX/yBiN3fHDWVxsGhMmsR9olUYQSIDwrq2ePIjHqB3ZP5/B+FkymOYAz+dSMhqKz2N42B27zwsRgXv1MMgX853SLoPuQufud5FKOGoAidQAVtencad7i8YulvwhO9532S5O3s9/nqwnydcsRlbYGzRDXlSdODKXTMkgZLMCt6dz79ujA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBl5Ns5l8oSWGC1fS+4xgfTgBBnH9fkAS+TuWHwTPDl/4Jj]
