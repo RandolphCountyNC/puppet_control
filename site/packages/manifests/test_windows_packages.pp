@@ -6,10 +6,10 @@ class packages::test_windows_packages {
     mode   => '0774',
   }
   package { 'Cb Defense Sensor 64-bit' :
-    ensure          => installed,
+    ensure          => present,
     provider        => 'windows',
     source          => 'C:/Ziptemp/installer_vista_win7_win8-64-3.1.0.150.msi',
     require         => File['installer_vista_win7_win8-64-3.1.0.150.msi'],
-    install_options => [{'COMPANY_CODE' => 'XRUEYC3WW8POEUM789Q'}],
+    install_options => [{'COMPANY_CODE' => 'QFLGUFKKWU1WXKV9U0P'}],
   }
 }
