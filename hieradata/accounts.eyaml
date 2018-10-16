@@ -1,12 +1,5 @@
 ---
 dmz_users:
-  'dshue'       :
-    comment     : 'Daniel Shue'
-    ensure      : 'absent'
-    groups      : ['Users','Administrators']
-    managehome  : 'true'
-    name        : ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAPa/NRHoNvSrjVO5f2ZXi1ab+d+BW7oyklxD4KE1RYZVUsa32OgqZRSAj8bIuJSqcGntJ3iKIUSdQFz71wWV6VChJIQmuFoR4xjO7RlUds9bSZZ0Sdsj6Q5hBcFO0aQ3XbTKG3xAb2/njLHzewqLTLds1hRUlGNaqAu0j95AfX/yBiN3fHDWVxsGhMmsR9olUYQSIDwrq2ePIjHqB3ZP5/B+FkymOYAz+dSMhqKz2N42B27zwsRgXv1MMgX853SLoPuQufud5FKOGoAidQAVtencad7i8YulvwhO9532S5O3s9/nqwnydcsRlbYGzRDXlSdODKXTMkgZLMCt6dz79ujA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBl5Ns5l8oSWGC1fS+4xgfTgBBnH9fkAS+TuWHwTPDl/4Jj]
-    password    : ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAS6ZB63IQIzcYhO0/N+YwZrFuv/pJY+RcE1QS+844uXPSI96PzOvX2ODYs4ExjWxvinOBqWRNogCZhrdMo4BYqs+ZogW31IhXAFa9CWN7hD+ZQ9eJqJHLbhqdLz7i8S1J0DJzR3vmkG3Lo5FKkGDTT2BE2lN/DMULau3wzZKIiO75N++cctqJlTr9m1kV0MVPIvhXnKsesbOCaYvK0ApGTCX6tbBrIl6uCe+4VLOiPPKu9luM3T81e74Bgjl5O2zEmpb1cVCcaUdVuGcKsmMAqHDVor6FZ+dG4eC2aKs2VyJPaR48UFazW3cCfOVmwQh8cwhxCUNr8Xog/q9mp/6WiDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCNcUe8GYaM3rhl02YawjwJgBCf65tGvxTVuVY9pKkgptuO]
   'mrowland'    :
     comment     : 'Michael Rowland'
     ensure      : 'present'
